@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recrutamento - Cartel DusCrime</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Recrutamento - Cartel DusCrime</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@
     }
 
     form {
-      max-width: 650px;
+      max-width: 600px;
       margin: 40px auto;
       background-color: #1a1a1a;
       padding: 25px;
@@ -37,6 +37,7 @@
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
+      color: #f5f5f5;
     }
 
     input, textarea, select {
@@ -50,9 +51,15 @@
       font-size: 1em;
     }
 
+    input:focus, textarea:focus, select:focus {
+      outline: 2px solid #b30000;
+    }
+
     input[type="file"] {
-      background-color: #222;
-      padding: 10px;
+      background-color: #111;
+      border: 1px solid #444;
+      padding: 8px;
+      cursor: pointer;
     }
 
     button {
@@ -80,20 +87,22 @@
   </style>
 </head>
 <body>
+
   <header>Formulário de Recrutamento - Cartel DusCrime</header>
 
-  <form id="recrutamentoForm" action="https://formsubmit.co/familyduscrime01@gmail.com" method="POST">
+  <form action="https://formsubmit.co/familyduscrime01@gmail.com" method="POST" enctype="multipart/form-data">
+
     <label>Nick no jogo:</label>
     <input type="text" name="Nick" required>
 
     <label>Foto do /minhaatividade 30:</label>
-    <input type="file" id="atividade" accept="image/*" required>
+    <input type="file" name="Atividade" accept="image/*" required>
 
     <label>Foto do /rg:</label>
-    <input type="file" id="rg" accept="image/*" required>
+    <input type="file" name="RG" accept="image/*" required>
 
     <label>Foto do /minhaspunicoes:</label>
-    <input type="file" id="punicoes" accept="image/*" required>
+    <input type="file" name="Punicoes" accept="image/*" required>
 
     <label>Você leu as regras da família?</label>
     <select name="Leu_as_regras" required>
@@ -118,59 +127,16 @@
     <label>Número do WhatsApp:</label>
     <input type="text" name="WhatsApp" placeholder="(DDD) 90000-0000" required>
 
-    <!-- Hidden fields -->
+    <!-- Configurações do FormSubmit -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="Novo Recrutamento - Cartel DusCrime">
     <input type="hidden" name="_template" value="box">
-
-    <!-- Esses vão receber os links das imagens -->
-    <input type="hidden" name="Atividade" id="atividadeLink">
-    <input type="hidden" name="RG" id="rgLink">
-    <input type="hidden" name="Punicoes" id="punicoesLink">
+    <input type="hidden" name="_autoresponse" value="Sua solicitação de recrutamento foi enviada com sucesso! Aguarde retorno da administração.">
 
     <button type="submit">Enviar Formulário</button>
   </form>
 
   <footer>© 2025 Cartel DusCrime - Todos os direitos reservados</footer>
 
-  <script>
-    async function uploadFile(fileInput) {
-      const file = fileInput.files[0];
-      if (!file) return "";
-
-      const formData = new FormData();
-      formData.append("file", file);
-
-      const response = await fetch("https://file.io", {
-        method: "POST",
-        body: formData,
-      });
-
-      const result = await response.json();
-      return result.link || "";
-    }
-
-    document.getElementById("recrutamentoForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const btn = e.target.querySelector("button");
-      btn.disabled = true;
-      btn.textContent = "Enviando...";
-
-      // Upload das 3 imagens
-      const atividadeLink = await uploadFile(document.getElementById("atividade"));
-      const rgLink = await uploadFile(document.getElementById("rg"));
-      const punicoesLink = await uploadFile(document.getElementById("punicoes"));
-
-      // Coloca os links nos campos ocultos
-      document.getElementById("atividadeLink").value = atividadeLink;
-      document.getElementById("rgLink").value = rgLink;
-      document.getElementById("punicoesLink").value = punicoesLink;
-
-      // Envia o formulário para o e-mail via FormSubmit
-      e.target.submit();
-    });
-  </script>
 </body>
 </html>
-
