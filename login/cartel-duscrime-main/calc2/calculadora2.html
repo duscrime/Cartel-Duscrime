@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora 2 - Horário Observado</title>
+  <link rel="stylesheet" href="calculadora2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora Cartel DusCrime</h1>
+    <h2>Calculadora 2: Horário Observado</h2>
+    <form id="form2">
+      <!-- Campos para inserção dos horários -->
+      <div class="cofre">
+        <label for="CofreBPSInput">🌋 Cofre BPS:</label>
+        <input type="time" id="CofreBPSHora" placeholder="Hora Observada">
+        <input type="text" id="CofreBPSRestante" placeholder="Tempo Restante (hh:mm)">
+      </div>
+      <div class="cofre">
+        <label for="NavioInput">🚢 Navio:</label>
+        <input type="time" id="NavioHora">
+        <input type="text" id="NavioRestante">
+      </div>
+      <div class="cofre">
+        <label for="IlhaInput">🏝️ Ilha:</label>
+        <input type="time" id="IlhaHora">
+        <input type="text" id="IlhaRestante">
+      </div>
+      <div class="cofre">
+        <label for="BarInput">🍺 Bar:</label>
+        <input type="time" id="BarHora">
+        <input type="text" id="BarRestante">
+      </div>
+      <div class="cofre">
+        <label for="LojaDeArmasInput">🔫 Loja de Armas 3:</label>
+        <input type="time" id="LojaDeArmasHora">
+        <input type="text" id="LojaDeArmasRestante">
+      </div>
+      <div class="cofre">
+        <label for="CassinoInput">🎰 Cassino:</label>
+        <input type="time" id="CassinoHora">
+        <input type="text" id="CassinoRestante">
+      </div>
+      <div class="cofre">
+        <label for="LotericaSFInput">💳 Lotérica SF:</label>
+        <input type="time" id="LotericaSFHora">
+        <input type="text" id="LotericaSFRestante">
+      </div>
+      <div class="cofre">
+        <label for="BancoCentralInput">🏛️ Banco Central:</label>
+        <input type="time" id="BancoCentralHora">
+        <input type="text" id="BancoCentralRestante">
+      </div>
+      <button type="button" id="calcular2">Calcular</button>
+    </form>
+    <div id="resultado2" class="resultado"></div>
+    <button id="copiarLista2" style="display:none;">Copiar Lista</button>
+  </div>
+  <script src="calculadora2.js"></script>
+</body>
+</html>

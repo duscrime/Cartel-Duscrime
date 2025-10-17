@@ -1,0 +1,89 @@
+ :root {
+      --bg:#0b0b0b;
+      --red:#b71c1c;
+      --red-dark:#8f1717;
+      --muted:#d8d8d8;
+      --card:#1a1a1a;
+      --radius:14px;
+      --max-width:1000px;
+    }
+
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:"Roboto",sans-serif;
+      background:linear-gradient(180deg,#070707 0%, #0f0f0f 100%);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      padding-bottom:80px;
+    }
+
+    header {
+      background:var(--red);
+      padding:18px 0;
+      text-align:center;
+      color:white;
+      font-family:"Montserrat",sans-serif;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+    header h1 {
+      margin:0;
+      font-size:26px;
+    }
+
+    .wrap {
+      max-width:var(--max-width);
+      margin:40px auto;
+      padding:0 18px;
+    }
+
+    .rules-card {
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 0 20px rgba(0,0,0,0.4);
+      padding:30px 24px;
+      line-height:1.6;
+    }
+
+    h2 {
+      text-align:center;
+      color:#fff;
+      font-family:"Montserrat",sans-serif;
+      font-weight:800;
+      margin:0 0 30px 0;
+      text-transform:uppercase;
+      letter-spacing:0.5px;
+    }
+
+    ol {
+      padding-left:22px;
+      margin:0;
+    }
+
+    li {
+      margin-bottom:18px;
+      color:#f3f3f3;
+    }
+
+    strong { color:#ffdddd; }
+
+    footer {
+      margin-top:60px;
+      text-align:center;
+      font-size:14px;
+      color:rgba(255,255,255,0.6);
+    }
+
+    .back-btn {
+      display:inline-block;
+      margin-top:28px;
+      background:var(--red);
+      color:white;
+      padding:12px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      transition:background .2s;
+    }
+    .back-btn:hover { background:var(--red-dark); }

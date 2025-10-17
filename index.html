@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartel DusCrime$</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/js.js"></script>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">DcR$</div>
+        <div>
+          <h1>Cartel DusCrime$</h1>
+          <div class="muted" style="font-size:12px">Família GTA • Brasil Play Shox</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="header-menu">
+       <li><a class="ghost" href="'https://discord.gg/yEfnPsXDhY">Entrar no Discord</a></li>
+        <li><a class="btn" href="https://www.instagram.com/family_duscrime?igsh=MTJyNTYycWpsODZ1cA== ">Instagram</a></li>
+        <li><a class="ghost" href="login/login.html">Calculadora</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <h2>Pronto para começar?</h2>
+      <p>Junte-se a centenas de membros e viva as melhores esperiencia que você pode ter no Cartel DusCrime — Maior família de crime organizado do GTA SAMP </p>
+      <div class="cta-row">
+        <a class="btn-white" href="rec/recrutamento.html">Recrutamento</a>
+        <a href="regras/regras.html" class="btn-outline">Ver Regras</a>
+      </div>
+
+      <svg style="position:absolute; right:22px; top:12px; opacity:0.08" width="180" height="140" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 70C25 48 42 62 74 26" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </section>
+    <section style="margin-top:32px;">
+      <h3 style="margin:0 0 12px 0; font-family: 'Montserrat', sans-serif; color: #f5f5f5">HISTORIA DO</h3>
+      <h2 style="margin:0 0 6px 0; font-family: 'Montserrat', sans-serif; color: #ffefef">CARTEL DUSCRIME</h2>
+    </section>
+    <section id="gallery" class="gallery" aria-label="Galeria de fotos">
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+1" data-link="#link1" onclick="openModal(this)">
+        <img src="img/dcr1.png" alt="Foto 1">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+2" data-link="#link2" onclick="openModal(this)">
+        <img src="img/dcr2.png" alt="Foto 2">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+3" data-link="#link3" onclick="openModal(this)">
+        <img src="img/dcr3.png" alt="Foto 3">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+4" data-link="#link4" onclick="openModal(this)">
+        <img src="img/dcr4.png" alt="Foto 4">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+5" data-link="#link5" onclick="openModal(this)">
+        <img src="img/dcr5.webp" alt="Foto 5">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+6" data-link="#link6" onclick="openModal(this)">
+        <img src="img/dcr6.webp" alt="Foto 6">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+7" data-link="#link7" onclick="openModal(this)">
+        <img src="img/dcr7.webp" alt="Foto 7">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+8" data-link="#link8" onclick="openModal(this)">
+        <img src="img/dcr8.webp" alt="Foto 8">
+      </div>
+
+      <div class="thumb" data-src="https://via.placeholder.com/1200x700?text=Foto+9" data-link="#link9" onclick="openModal(this)">
+        <img src="img/dcr9.webp" alt="Foto 9">
+      </div>
+    </section>
+    <footer>
+      <div>©2025 Cartel DusCrime. Todos os direitos reservados.</div>
+      <div style="opacity:0.85">Cartel DusCrime melhor familia do SAMP</div>
+    </footer>
+  </div>
+  <div id="modal" class="modal" role="dialog" aria-hidden="true" onclick="closeModal(event)">
+    <div class="box" role="document" onclick="event.stopPropagation()">
+      <img id="modalImg" src="" alt="Foto ampliada">
+      <div style="padding:10px 14px; display:flex; justify-content:space-between; align-items:center; gap:10px;">
+        <div id="modalLinkArea" style="font-size:14px"></div>
+        <div style="display:flex; gap:8px;">
+          <a id="openLinkBtn" class="btn-outline" href="#" target="_blank" rel="noopener" style="text-decoration:none">Abrir link</a>
+          <button class="btn-outline" onclick="closeModal()">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

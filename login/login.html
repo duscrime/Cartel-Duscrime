@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Cartel DusCrime</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="card" role="main" aria-labelledby="loginTitle">
+    <div class="brand">
+      <div class="logo">DcR$</div>
+      <div>
+        <h1 id="loginTitle">Calculadora — Login</h1>
+        <div class="subtitle">Prencha para acessar a Calculadora</div>
+      </div>
+    </div>
+
+    <form id="formLogin" onsubmit="return false;" autocomplete="off" aria-describedby="err">
+      <div>
+        <label for="user">Usuário</label>
+        <input id="user" name="user" type="text" inputmode="text" autocomplete="username" required maxlength="40" placeholder="Digite seu usuário">
+      </div>
+
+      <div>
+        <label for="pass">Senha</label>
+        <input id="pass" name="pass" type="password" inputmode="text" autocomplete="current-password" required maxlength="40" placeholder="Digite sua senha">
+      </div>
+
+      <div class="actions">
+        <button id="btnLogin" class="btn" type="button">Entrar</button>
+        <a class="btn ghost" href="../index.html">Voltar</a>
+      </div>
+
+      <div id="err" class="error" role="alert" aria-live="assertive"></div>
+
+      <p class="note" style="margin-top:12px">Este Calculadora é apenas para membros do Cartel DusCrime</p>
+    </form>
+  </main>
+
+  <script>
+    const C_USER = 'dcradmin';
+    const C_PASS = 'dcrpass';
+
+    const inpUser = document.getElementById('user');
+    const inpPass = document.getElementById('pass');
+    const btn = document.getElementById('btnLogin');
+    const err = document.getElementById('err');
+
+    function showError(text){
+      err.textContent = text;
+      err.style.display = 'block';
+    }
+    function hideError(){
+      err.style.display = 'none';
+    }
+
+    btn.addEventListener('click', () => {
+      hideError();
+      const u = (inpUser.value || '').trim();
+      const p = (inpPass.value || '').trim();
+
+      if(!u || !p){
+        showError('Preencha usuário e senha.');
+        return;
+      }
+
+      if(u === C_USER && p === C_PASS){
+        sessionStorage.setItem('dcr_logged', '1');
+        sessionStorage.setItem('dcr_user', u);
+        btn.textContent = 'Entrando...';
+        btn.disabled = true;
+        setTimeout(() => window.location.href = './cartel-duscrime-main/index.html', 500);
+      } else {
+        showError('Usuário ou senha incorretos.');
+        document.querySelector('.card').animate([
+          { transform: 'translateX(0)' },
+          { transform: 'translateX(-8px)' },
+          { transform: 'translateX(8px)' },
+          { transform: 'translateX(0)' }
+        ], { duration: 300, iterations: 1 });
+      }
+    });
+
+    [inpUser, inpPass].forEach(el => el.addEventListener('keydown', e => {
+      if(e.key === 'Enter') btn.click();
+    }));
+  </script>
+</body>
+</html>
