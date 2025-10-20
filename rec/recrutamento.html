@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Recrutamento - Cartel DusCrime</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>Formulário de Recrutamento - Cartel DusCrime</header>
 
-  <form action="https://formsubmit.co/familyduscrime01@gmail.com" method="POST" enctype="multipart/form-data">
+  <form action="https://formsubmit.co/familyduscrime01@gmail.com" method="POST">
 
     <label>Nick no jogo:</label>
     <input type="text" name="Nick" required>
 
-    <label>Foto do /minhaatividade 30:</label>
-    <input type="file" name="Atividade" accept="image/*" required>
+    <label>Link da foto do /minhaatividade 30:</label>
+    <input type="url" name="Atividade" placeholder="Cole o link da imagem aqui" required>
 
-    <label>Foto do /rg:</label>
-    <input type="file" name="RG" accept="image/*" required>
+    <label>Link da foto do /rg:</label>
+    <input type="url" name="RG" placeholder="Cole o link da imagem aqui" required>
 
-    <label>Foto do /minhaspunicoes:</label>
-    <input type="file" name="Punicoes" accept="image/*" required>
+    <label>Link da foto do /minhaspunicoes:</label>
+    <input type="url" name="Punicoes" placeholder="Cole o link da imagem aqui" required>
 
     <label>Você leu as regras da família?</label>
     <select name="Leu_as_regras" required>
@@ -51,7 +50,6 @@
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="Novo Recrutamento - Cartel DusCrime">
     <input type="hidden" name="_template" value="box">
-    <input type="hidden" name="_autoresponse" value="Sua solicitação de recrutamento foi enviada com sucesso! Aguarde retorno da administração.">
 
     <button type="submit">Enviar Formulário</button>
   </form>
@@ -60,5 +58,3 @@
 
 </body>
 </html>
-
-
