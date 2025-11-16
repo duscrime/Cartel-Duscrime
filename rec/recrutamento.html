@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Recrutamento - Cartel DusCrime</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>Formulário de Recrutamento - Cartel DusCrime</header>
 
-  <form action="https://formsubmit.co/familyduscrime01@gmail.com" method="POST">
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- SUA CHAVE DO WEB3FORMS -->
+    <input type="hidden" name="access_key" value="f7779d10-ecd6-4496-a3b5-a7dcba943813">
 
     <label>Nick no jogo:</label>
     <input type="text" name="Nick" required>
@@ -47,11 +49,6 @@
     <label>Número do WhatsApp:</label>
     <input type="text" name="WhatsApp" placeholder="(DDD) 90000-0000" required>
 
-    <!-- Configurações do FormSubmit -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Novo Recrutamento - Cartel DusCrime">
-    <input type="hidden" name="_template" value="box">
-
     <button type="submit">Enviar Formulário</button>
   </form>
 
@@ -59,4 +56,3 @@
 
 </body>
 </html>
-
